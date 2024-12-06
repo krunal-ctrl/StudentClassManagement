@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using CsvHelper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StudentClassManagement.Core.DTOs;
 using StudentClassManagement.Core.Entities;
@@ -9,6 +10,7 @@ namespace StudentClassManagement.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class StudentController : ControllerBase
 {
     private readonly IStudentService _studentService;
